@@ -90,16 +90,13 @@ function App() {
         {analysis && (
           <div className="results-box">
             <h3>Analysis Results</h3>
-            <br/>
             <p><strong>Filename:</strong> {analysis.filename}</p>
-            <br/>
             <h4>Detected Signatures:</h4>
-            <br/>
             {analysis.matches.map((match, idx) => (
-              <div key={idx} style={{ marginBottom: '10px' }}>
-                <p>Type: .{match.ext.toUpperCase()}</p>
-                <p>Desc: {match.description}</p>
-                <p>Confidence: {(match.confidence * 100).toFixed(0)}%</p>
+              <div key={idx} className="match-item">
+                <p><strong>Type:</strong> .{match.ext.toUpperCase()}</p>
+                <p><strong>Desc:</strong> {match.description}</p>
+                <p><strong>Confidence:</strong> {(match.confidence * 100).toFixed(0)}%</p>
               </div>
             ))}
           </div>
@@ -108,7 +105,6 @@ function App() {
 
       <div className="panel-right">
         <h3>Hex Dump (First 256 Bytes)</h3>
-        <br/>
         {analysis ? (
           <HexViewer hexDump={analysis.hex_dump} />
         ) : (
