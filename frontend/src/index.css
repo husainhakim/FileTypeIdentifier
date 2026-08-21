@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #050505;
+  --text-color: #00ff41;
+  --accent-color: #00ff41;
+  --alert-color: #ff003c;
+  --border-color: #00ff41;
+  --muted-text: #005a16;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.panel-left {
+  width: 30%;
+  border-right: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-right {
+  width: 70%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.upload-box {
+  border: 1px dashed var(--border-color);
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-box:hover, .upload-box.drag-active {
+  background-color: rgba(0, 255, 65, 0.1);
+}
+
+.results-box {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+}
+
+.alert-box {
+  border: 1px solid var(--alert-color);
+  color: var(--alert-color);
+  background-color: rgba(255, 0, 60, 0.1);
+  padding: 15px;
+  font-weight: bold;
+}
+
+.hex-viewer {
+  font-family: var(--font-mono);
+  white-space: pre;
+  font-size: 13px;
+  background-color: #000;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.hex-line {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.hex-offset {
+  color: var(--muted-text);
+  margin-right: 20px;
+  user-select: none;
+}
+
+.hex-bytes {
+  color: var(--text-color);
+  margin-right: 20px;
+}
+
+.hex-ascii {
+  color: #aaa;
+}
+
+button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
