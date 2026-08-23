@@ -1,5 +1,7 @@
 # FileIdentifier 🔍
 
+🌐 **Live Demo / Hosted App**: [https://file-type-identifier.vercel.app/](https://file-type-identifier.vercel.app/)
+
 **FileIdentifier** is a cybersecurity tool designed to identify the true file type of a file by analyzing its "magic numbers" (file signatures) rather than relying on its file extension. This is critical in cybersecurity for detecting spoofed files or potential malware hiding behind fake extensions.
 
 ## 🚀 Features
